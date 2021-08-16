@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#navbar {
+  padding: .5rem 1rem;
+  box-shadow: 1px 1px 3px #bbb;
+  z-index: 100;
+}
+
+.format-dropdown {
+  margin: 0 1rem 0 .5rem;
+}
+
+#doc-container {
+  background-color: #f1f1fc;
+  flex: 1;
+  display: flex;
+}
+
+#input-doc {
+  width: 50%;
+  padding: 1rem .5rem 1rem 1rem;
+}
+
+#output-doc {
+  width: 50%;
+  padding: 1rem 1rem 1rem .5rem;
+}
+
+.CodeMirror {
+  box-shadow: 1px 1px 3px #bbb;
+  z-index: 99;
+  /* font-family: monospace !important; */
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Pandoc in Wasm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/stex/stex.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <section class="navbar-section">
+        <a class="navbar-brand text-primary">Pandoc in Wasm</a>
+      </section>
+      <section class="navbar-center">
+          <div class="text-primary">From: </div>
+          <div class="dropdown format-dropdown">
+            <a id="from-button" href="#" class="btn dropdown-toggle" tabindex="0">
+              <span>Markdown</span><i class="icon icon-caret"></i>
+            </a>
+            <ul class="menu">
+              <li id="from-markdown" class="menu-item"><a href="#">Markdown</a></li>
+              <li id="from-html"     class="menu-item"><a href="#">HTML</a></li>
+              <li id="from-latex"    class="menu-item"><a href="#">LaTeX</a></li>
+            </ul>
+          </div>
+          <div class="text-primary">To: </div>
+          <div class="dropdown format-dropdown">
+            <a id="to-button" href="#" class="btn dropdown-toggle" tabindex="0">
+              HTML <i class="icon icon-caret"></i>
+            </a>
+            <ul class="menu">
+              <li id="to-markdown" class="menu-item"><a href="#">Markdown</a></li>
+              <li id="to-html"     class="menu-item"><a href="#">HTML</a></li>
+              <li id="to-latex"    class="menu-item"><a href="#">LaTeX</a></li>
+            </ul>
+          </div>
+      </section>
+      <section class="navbar-section">
+        <a href="https://github.com/y-taka-23/wasm-pandoc" class="btn">GitHub</a>
+      </section>
+    </header>
+    <div id="doc-container">
+      <div id="input-doc">
+        <textarea id="input-text" hidden></textarea>
+      </div>
+      <div id="output-doc">
+        <textarea id="output-text" hidden></textarea>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
